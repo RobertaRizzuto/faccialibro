@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react'; 
 import FriendCard from '../FriendCard';
-import { GET } from '../../utils/api';
+import { DELETE, GET } from '../../utils/api';
 import './index.css';
 
-const FriendCardList = ({setFilteredValue}) => {
+const FriendCardList = ({setFilteredValue, isRenderedList, setRenderedList}) => {
   const [friendList, setFriendList] = useState([]);
 
   useEffect(() => {
     GET('friends').then(data => setFriendList(data));
-  }, []);
+  }, [isRenderedList]);
 
-  const obj = {
-    name: 'pippo', photo: 'https://randomuser.me/api/portraits/lego/5.jpg'
-  }
 
   return (
     <div className="FriendCardList">
       {
         friendList.length
-          ? friendList.map(friend => <FriendCard setFilteredValue={setFilteredValue} key={friend.id} friendData={friend}/>)
+          ? friendList.map(friend => <FriendCard setFilteredValue={setFilteredValue} onImgClick={() => {
+             DELETE('friends', friend.id).then(()=> setRenderedList(!isRenderedList));
+            }} key={friend.id} friendData={friend}/>)
           : <p>Loading...</p>
       }
     </div>

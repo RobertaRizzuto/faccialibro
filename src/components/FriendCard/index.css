@@ -1,5 +1,5 @@
 .FriendCard {
-  width: 180px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,6 +16,8 @@
 
 .FriendCard__photo {
   width: 75px;
+  height: 75px;
+  
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }

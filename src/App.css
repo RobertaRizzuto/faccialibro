@@ -1,24 +1,25 @@
-.App {
+.main_content {
   color: rgb(24, 24, 24);
   display: flex;
   font-size: 0.9rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .App__friends {
   color: lightgrey;
 }
 
-.App_messages {
+.App_messages, .App__friends {
   padding: 20px;
   width: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  color: black;
+  
 }
 
 @media (max-width: 767px) {
-  .App {
+  .main_content {
     flex-direction: column;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,33 @@
+.main-navbar {
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  height: 60px;
+  background-color: lightseagreen;
+}
+
+.logo {
+  height: 60px;
+ 
+}
+
+.main-navbar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  list-style-type: none;
+  
+}
+
+.main-navbar a{
+  padding: 10px;
+  border-radius: 6px;
+ color:#394149;
+}
+
+.main-navbar a:hover{
+  color: rgb(255, 255, 255);
+  background-color: #24216e9a;
+ }
