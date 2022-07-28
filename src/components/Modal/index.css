@@ -23,4 +23,5 @@
   height: 100vh;
   z-index: 1;
 }
+.Modal button { margin: 20px; }
 

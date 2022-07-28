@@ -5,24 +5,27 @@ import Button from '../Button';
 import './index.css';
 
 const AddMessage = ({ isRenderedList, onAddButton }) => {
-  // Controlled component!!! - Forms e input
+  
   const [messageText, setMessageText] = useState('');
-  const [sender, setSender] = useState('');
+ 
 
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    if (messageText && sender) {
+    if (messageText && localStorage.getItem('username')) {
       POST('messages', {
         text: messageText,
-        sender: sender,
+        sender: localStorage.getItem('username'),
         date: new Date().toLocaleDateString()
       })
       .then(() => {
         setMessageText('');
-        setSender('');
+        
         onAddButton(!isRenderedList);
       })
+    }
+    else {
+      alert("esegui l'accesso per inviare messaggi")
     }
   }
 
@@ -36,14 +39,7 @@ const AddMessage = ({ isRenderedList, onAddButton }) => {
         onChange={(e) => setMessageText(e.target.value)}
         required
       />
-      <input
-        className="AddMessage__sender"
-        type="text"
-        placeholder="Autore..."
-        value={ sender }
-        onChange={(e) => setSender(e.target.value)}
-        required
-      />
+     
       <Button type="submit" textContent='Invia' color='lightseagreen' />
     </form>
   )
