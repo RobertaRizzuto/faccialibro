@@ -1,21 +1,55 @@
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #20b2aa #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #20b2aa;
+    border-radius: 10px;
+    border: 3px outset #ffffff;
+  }
+
 .main_content {
   color: rgb(24, 24, 24);
   display: flex;
   font-size: 0.9rem;
   justify-content: space-around;
+  gap: 20px;
+  padding: 0 20px;
 }
-
+hr{
+ filter: opacity(0.5);
+}
+.App_messages,
 .App__friends {
-  color: lightgrey;
-}
-
-.App_messages, .App__friends {
-  padding: 20px;
-  width: 400px;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  color: black;
-  
+  color: rgb(27, 27, 27);
+}
+.header {
+  color: rgb(27, 27, 27);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.448);
+  padding: 0px 6px 2px 0px;
+  border-bottom-right-radius: 6px;
+}
+.search_input {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+p {
+  margin: 2px;
 }
 
 @media (max-width: 767px) {
@@ -24,9 +58,12 @@
     justify-content: center;
     align-items: center;
   }
-}
-
-.search_input {
-  padding: 10px 20px;
- margin-bottom: 20px; 
+  .App_messages,
+  .App__friends,
+  .App__gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: rgb(27, 27, 27);
+  }
 }

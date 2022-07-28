@@ -6,9 +6,10 @@ const Modal = ({mainModalText, onCancelBtnClick, onOkBtnClick, type, setModalVis
   const [usernameInput, setUsernameInput] = useState('');
   if (type === 'login') {
   
-    const onGetUsername = () => {
+    const onGetUsername = (event) => {
+      event.preventDefault();
       localStorage.setItem('username', usernameInput);
-      setModalVisibility(false)
+      setModalVisibility()
     }
   
     return (

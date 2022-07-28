@@ -1,5 +1,9 @@
 .MessageCardList {
+  margin-top: 10px;
+  padding: 1px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: calc(100vh - 403px) ;
+  overflow-y: scroll;
 }
