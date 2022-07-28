@@ -41,6 +41,7 @@ const Navbar = () => {
     <nav className="main-navbar">
       <section className="logotype">
         <img className="logo" src={logo} alt="logo" />
+        <h1>Faccialibro</h1>
       </section>
       <section className="dropdown">
         <ul>

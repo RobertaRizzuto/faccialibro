@@ -5,12 +5,16 @@
   align-items: center;
   padding: 20px 20px;
   height: 60px;
-  background-color: lightseagreen;
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(41,226,216,1) 38%, rgba(32,178,170,1) 61%, rgba(11,68,65,1) 100%);
 }
 
-.logo {
+.logotype {
+  display: flex;
   height: 60px;
- 
+  filter:invert() ;
+  font-size: 26px;
+  align-items: center;
 }
 
 .main-navbar ul {

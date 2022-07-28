@@ -6,6 +6,7 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import AddFriend from "./components/AddFriend";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isRenderedList, setRenderedList] = useState(false);
@@ -59,6 +60,7 @@ function App() {
           />
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
