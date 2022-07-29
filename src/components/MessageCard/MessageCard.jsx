@@ -24,7 +24,7 @@ const MessageCard = ({textContent, isRenderedList, onDeleteBtn}) => {
         </p>
       </div>
       { isModalVisible &&
-        <Modal onCancelBtnClick={setModalVisibility} onOkBtnClick={() =>  
+        <Modal onCancelBtnClick={()=> setModalVisibility(false)} onOkBtnClick={() =>  
           DELETE('messages', textContent.id)
             .then(() => onDeleteBtn(!isRenderedList))
       } mainModalText='sei sicuro di voler eliminare il messaggio?'/>

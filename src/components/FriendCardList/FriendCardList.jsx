@@ -7,7 +7,7 @@ const FriendCardList = ({setFilteredValue, isRenderedList, setRenderedList}) => 
   const [friendList, setFriendList] = useState([]);
 
   useEffect(() => {
-    GET('friends').then(data => setFriendList(data));
+    GET('friends').then(data => setFriendList(data.reverse()));
   }, [isRenderedList]);
 
 

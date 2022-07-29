@@ -46,17 +46,23 @@ const Navbar = () => {
       <section className="dropdown">
         <ul>
           {linkList.map((link) => (
-            <ListItem title={link.title} link={link.url} key={link.id} />
+            <ListItem
+              title={link.title.toUpperCase()}
+              link={link.url}
+              key={link.id}
+            />
           ))}
           {localStorage.getItem("username") ? (
             <Button
-              textContent="logout"
-              onBtnClick={() => {localStorage.clear();
-              window.location.reload()}}
+              textContent="LOG-OUT"
+              onBtnClick={() => {
+                localStorage.clear();
+                window.location.reload();
+              }}
             />
           ) : (
             <Button
-              textContent="login"
+              textContent="LOG-IN"
               onBtnClick={() => setModalVisibility(true)}
             />
           )}

@@ -1,24 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #20b2aa #ffffff;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #b25320 white;
+  font-family: "Raleway", sans-serif;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
+*::-webkit-scrollbar-track {
+  background: rgba(219, 219, 223, 0.353);
+  border-radius: 10px;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #20b2aa;
-    border-radius: 10px;
-    border: 3px outset #ffffff;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
 
 .main_content {
   color: rgb(24, 24, 24);
@@ -28,8 +30,12 @@
   gap: 20px;
   padding: 0 20px;
 }
-hr{
- filter: opacity(0.5);
+input {
+  border-radius: 6px;
+  border: 1px rgba(0, 0, 0, 0.327) solid;
+}
+hr {
+  filter: opacity(0.5);
 }
 .App_messages,
 .App__friends {
@@ -66,5 +72,4 @@ p {
     flex-direction: column;
     color: rgb(27, 27, 27);
   }
-  
 }
